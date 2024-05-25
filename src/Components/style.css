@@ -8,6 +8,15 @@
   margin: 2vw;
   border-radius: 10px;
   padding: 2vw;
+  background: linear-gradient(
+    to top right,
+    rgba(107, 70, 193, 0.3) 0%,
+    rgba(107, 70, 193, 0.3) 5%,
+    rgba(107, 70, 193, 0.3) 10%,
+    rgba(0, 0, 0, 0.3) 20%,
+    /* Adding black with 30% opacity */ transparent 40%,
+    transparent 100%
+  );
 }
 
 .header {
@@ -58,11 +67,12 @@
 .content-txt {
   font-size: 5rem;
   color: white;
-  line-height: 1; /* Reduce line height */
+  line-height: 1;
+  margin: 0px;
 }
 
 .arrow-icon {
-  font-size: 10rem;
+  font-size: 7rem;
   cursor: pointer;
   color: #6b46c1; /* Adjust color as needed */
 }
@@ -71,7 +81,10 @@
   font-size: 5rem;
   color: white;
   padding-left: 100px;
-  line-height: 1; /* Reduce line height */
+  line-height: 1;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .hero-img {
@@ -243,43 +256,85 @@ button {
 }
 
 /* Achievment css */
-/* style.css */
 .achievement-container {
   border: 1px solid #a0aec0;
   border-radius: 20px;
   background-color: white;
+  padding: 20px;
+  width: 90%;
+  margin: 2vw auto;
+  height: 80vh;
+}
+.heading h2 {
+  font-size: 4rem;
+  background: -webkit-linear-gradient(left, black, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  padding-left: 5vw;
+}
+.achievement-content {
+  width: 90%;
+  display: flex;
+}
+.achievement-img img {
+  width: 40vw;
+  position: relative;
+  bottom: 19vw;
+}
+.achievement-text h2 {
+  font-size: 4rem;
+  background: -webkit-linear-gradient(left, black, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.achievement-text span {
+  font-weight: lighter;
+}
+
+.achievement-text .highlight {
+  color: #4619c2; /* Change to your desired color */
+}
+
+
+
+
+/* .achievement-container {
+  border: 1px solid #a0aec0;
+  border-radius: 20px;
+  background-color: white;
   color: black;
-  /* overflow: hidden;
+  overflow: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; */
-  padding: 0vw 5vw;
+  align-items: center;
+  padding: 2vw 5vw;
   padding: 20px;
   width: 90%;
   margin: auto;
 }
 
 .achievement-content {
-
 }
-
-/* .achievement-main {
+.achievement-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
   width: 100%;
-} */
-
-/* .text-and-image-container {
+}
+.text-and-image-container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-} */
+}
 
 .title {
   font-size: 5rem;
@@ -419,4 +474,4 @@ button {
   .animated-image {
     left: 0;
   }
-}
+} */
