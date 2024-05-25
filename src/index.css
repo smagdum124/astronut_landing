@@ -1,0 +1,17 @@
+@font-face {
+  font-family: Megatoya;
+  src: url("./assets//fonts/BD\ Megatoya\ Regular.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: Megatoya;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
