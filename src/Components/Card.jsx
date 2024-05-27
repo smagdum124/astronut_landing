@@ -1,11 +1,11 @@
 import React from "react";
 import cardBg from "../assets/Group 9218.png";
 import Union from "../assets/Union.png";
-import MaskGroup from "../assets/Mask group.png";
-import MaskGroup1 from "../assets/Mask group (1).png";
+import startBg from "../assets/star bg.png";
+import cubeBg from "../assets/cube bg.png";
 import star from "../assets/Star 9.png"
 import cube from "../assets/Group 9264.png"
-import "./style.css";
+import "./card.css";
 
 function Card() {
   return (
@@ -18,14 +18,14 @@ function Card() {
         </div>
       </div>
       <div className="card">
-        <img className="card-bg" src={MaskGroup} alt="" />
+        <img className="card-bg" src={cubeBg} alt="" />
         <div className="inner-content">
           <img className="union-image" src={star} alt="" />
           <h3>Premium User Experience</h3>
         </div>
       </div>
       <div className="card">
-        <img className="card-bg" src={MaskGroup1} alt="" />
+        <img className="card-bg" src={startBg} alt="" />
         <div className="inner-content">
           <img className="union-image" src={cube} alt="" />
           <h3>All new Perfectly Crafted Tools</h3>

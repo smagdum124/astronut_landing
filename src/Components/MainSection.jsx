@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 import mainImg from "../assets/Group 9181.png";
 
 function MainSection() {

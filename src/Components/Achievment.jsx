@@ -1,5 +1,4 @@
-import pose2 from "../assets/pose9 1.png";
-import "./style.css";
+import pose2 from "../assets/flying.png";
 import rectangle from "../assets/Rectangle 4058.png";
 import arrow from "../assets/Group 9268.png";
 import know from "../assets/Group 9222.png";
@@ -19,19 +18,29 @@ const Achievement = () => {
         </div>
         <div className="achievement-text">
           <h2 className="achiev-txt2">Already above</h2>
-          <h2>
+          < h2 className="achiev-txt3">
             <span>the</span> <span className="highlight">Surface</span>
           </h2>
           <div className="image-container">
             <div className="image-with-text">
-              <img src={rectangle} alt="" />
-              <p>First Image Text</p>
+              <div className="image-overlay">
+                <img src={rectangle} alt="" />
+                <div className="text-container">
+                  <h2 className="inner_txt">24K</h2>
+                  <p>Projects Lanched</p>
+                </div>
+              </div>
             </div>
-            <div className="image-with-text">
-              <img src={rectangle} alt="" />
-              <p>Second Image Text</p>
+            <div className="image-with-text2">
+              <div className="image-overlay">
+                <img src={rectangle} alt="" />
+                <div className="text-container">
+                  <h2 className="inner_txt">2.3M</h2>
+                  <p>Member in Community</p>
+                </div>
+              </div>
             </div>
-            <img style={{ width: "11vw", height: "10vw" }} src={arrow} alt="" />
+            <img className="third_img" style={{}} src={arrow} alt="" />
           </div>
         </div>
       </div>
