@@ -82,7 +82,7 @@
 .arrow-icon {
   font-size: 7rem;
   cursor: pointer;
-  color: #B557FA; /* Adjust color as needed */
+  color: #b557fa; /* Adjust color as needed */
 }
 
 .content-txt2 {
@@ -102,6 +102,9 @@
 
 .hero-img img {
   max-width: 100%;
+  transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
 .button-group {
@@ -114,7 +117,7 @@
   padding: 0.6rem 1.5rem;
   font-size: 1rem;
   color: white;
-  background-color: #B557FA; /* Adjust color as needed */
+  background-color: #b557fa; /* Adjust color as needed */
   border: none;
   border-radius: 20px;
   margin-right: 1rem;
@@ -149,6 +152,17 @@
   height: auto; /* Maintain aspect ratio */
 }
 
+/* responsive code  */
+
+@media (max-width: 768px) {
+  .hero-img {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Existing styles... */
+
 /* main section  */
 .main-container {
   display: flex;
@@ -164,7 +178,8 @@
 
 .main-img {
   flex: 1;
-  padding-right: 2rem; /* Optional padding for spacing between image and content */
+  padding-right: 2rem;
+  width: 24%;
 }
 
 .main-img img {
@@ -177,22 +192,34 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 70%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
+}
+
+.main-content.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .btn-group {
   display: flex;
   gap: 1rem; /* Space between buttons */
   margin-bottom: 2rem; /* Space below buttons */
+  width: 70%;
 }
+
 .activebtn {
   padding: 0.5rem 2.2rem;
   font-size: 0.8rem;
   color: white;
-  background-color: #B557FA;
+  background-color: #b557fa;
   border: none;
   border-radius: 20px;
   cursor: pointer;
 }
+
 button {
   padding: 0.5rem 2.2rem;
   font-size: 0.8rem;
@@ -204,7 +231,11 @@ button {
 }
 
 .btn-group button:hover {
-  background-color: #B557FA; /* Darker shade for hover effect */
+  background-color: #b557fa; /* Darker shade for hover effect */
+}
+
+.main-txt {
+  width: 70%;
 }
 
 .main-txt h2 {
@@ -236,8 +267,9 @@ button {
   height: 80vh;
 }
 
-.heading h2 {
+.achievement-txt {
   padding-left: 4vw;
+  margin: 0;
   font-size: 4rem;
   background: -webkit-linear-gradient(left, black, white);
   -webkit-background-clip: text;
@@ -245,128 +277,99 @@ button {
   font-weight: bold;
 }
 
-.achievement-content {
+.achievement-main {
   display: flex;
-  justify-content: center;
+  position: relative;
+}
+
+.achievement-img {
+  width: 30%;
+  position: relative;
+}
+
+.modelPose {
+  width: 37vw;
+  position: relative;
+  bottom: 30vh;
+}
+
+.know {
+  position: relative;
+  top: -50%;
+  left: 20%;
+  transform: translateX(-50%);
+  display: flex;
   align-items: center;
 }
 
-.achievement-img img {
-  width: 40vw; /* Adjust width as needed */
+.achievement-img span {
   position: relative;
-  bottom: 20vw;
-  left: 3vw;
+  top: -54%;
+  left: 27%;
+  color: #b557fa;
 }
 
-.know-more {
-  display: flex;
-  align-items: center;
-  position: relative;
-  top: -12vw;
-  left: 7vw;
+.achievement-containt {
+  width: 70%;
+  padding-left: 2vw;
 }
 
-.know-more img {
-  width: 50px; /* Adjust width as needed */
-}
-
-.know-more span {
-  font-size: 1.2rem;
-  color: #6b46c1;
-  position: relative;
-  top: -20vw;
-  left: 4vw;
- 
-}
-
-.achievement-text {
-  position: relative;
-  top: -17vw;
-  /* left: 7vw; */
-}
-
-.achievement-text h2 {
+.achiev-txt2,
+.achiev-txt3 {
   font-size: 5rem;
   position: relative;
-  left: -8vw;
+  /* left: -8vw; */
   line-height: 1;
   margin: 0px;
-  /* padding: 0px; */
 }
 
-.achievement-text .highlight {
-  color: #4619c2; /* Change to your desired color */
+.achiev-txt3 {
   font-weight: bold;
-  font-family: Megatoya;
-  font-size: 5rem;
-  
-}
-.achiev-txt3 span{
-  font-family: Megatoyaitalic;
-  font-size: 3rem;
 }
 
-.image-container {
+.highlight {
+  color: #b557fa;
+}
+
+.achievement-inner {
   display: flex;
-  margin-top: 20px;
-  position: relative;
-  left: -10vw;
+  justify-content: space-between;
+  margin-top: 2vh;
 }
 
-.image-with-text {
+.img-txt {
   position: relative;
-  /* margin-right: 20px;  */
-}
-.image-with-text2 {
-  position: relative;
-  right: 100px;
-}
-
-.image-overlay {
-  position: relative;
-}
-
-.image-overlay img {
-  width: 25vw;
-}
-
-.text-container {
-  position: absolute;
-  bottom: 10px; /* Adjust vertical position */
-  left: 50%;
-  /* transform: translateX(-50%); */
-  text-align: center;
   display: flex;
-}
-
-.text-container h2 {
-  color: white;
-  font-size: 24px;
-  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  top: -2.5vw;
-  padding-left: 5px;
 }
 
-.text-container p {
+.img-txt img {
+  width: 25vw; 
+}
+
+.inner-txt{
+  display: flex;
+  justify-content: space-between;
+  position:absolute;
+}
+.inner-txt h2 {
   color: white;
-  font-size: 16px;
-  position: relative;
-  top: -4.5vw;
-  right: 5vw;
 }
-
-.arrow-img {
-  width: 100px; /* Adjust width as needed */
-  margin-top: 20px; /* Adjust margin as needed */
+.inner-txt p {
+  color: white;
+  padding: 0.6vw;
 }
-.third_img {
+.img-txt1 img{
   width: 14vw;
-  height: 14.5vw;
-  position: relative;
-  right: 14vw;
-  cursor: pointer;
 }
+.arrow {
+  max-width: 30px;
+  align-self: center;
+}
+
 
 /* collaborate page  */
 .collaborate_container {
@@ -420,6 +423,14 @@ button {
 .collab_form {
   width: 45%;
   position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.collab_form.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .collab_form h2 {
@@ -472,14 +483,21 @@ form {
 
 .button_group button {
   padding: 1em 3em;
-  background-color: #B557FA;
+  background-color: #b557fa;
   color: white;
   border: none;
   border-radius: 20px;
   font-size: 1.2vw;
   cursor: pointer;
   margin-top: 1vw;
-  margin-left: 1vw;
+  margin-left: 2%;
+  transition: background-color 0.3s ease;
+  border: 1px solid #b557fa;
+}
+
+.button_group button:hover {
+  background-color: transparent;
+  color: black;
 }
 
 #name {
@@ -497,8 +515,26 @@ form {
   flex: 3;
 }
 
-.footer{
+/* ///////////////////// */
+.footer {
   width: 90%;
   margin: auto;
   margin-top: 10px;
+}
+
+/* logo.css */
+.logo_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  transform: translateY(50px); /* Initially move logos down */
+  opacity: 0; /* Initially hide logos */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Add transition */
+}
+
+.logo_container.visible {
+  transform: translateY(0); /* Move logos back to original position */
+  opacity: 1; /* Make logos visible */
 }

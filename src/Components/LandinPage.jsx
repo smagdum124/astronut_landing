@@ -2,12 +2,13 @@ import React from "react";
 import Header from "./Header";
 import Card from "./Card";
 import MainSection from "./MainSection";
-import Achievement from "./Achievment";
+// import Achievement from "./Achievment";
 import HowToJoin from "./HowJoin";
 import Collaborate from "./Collaborate";
 import Future from "./Future";
 import NavBar from "./NavBar";
 import "./style.css"
+import Acheivement from "./Acheivement";
 
 function LandinPage() {
   return (
@@ -18,7 +19,8 @@ function LandinPage() {
       {/* main section  */}
       <MainSection />
       {/* Achievment section  */}
-      <Achievement />
+      {/* <Achievement /> */}
+      <Acheivement/>
       {/* how to join page  */}
       <HowToJoin />
       {/* collaborate page  */}

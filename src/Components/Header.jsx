@@ -3,6 +3,7 @@ import { FiArrowDownRight } from "react-icons/fi";
 import hero from "../assets/Frame 9064.png";
 import GroupImage from "../assets/Group 9188.png";
 import NavBar from "./NavBar";
+import LogoComp from "./LogoComp";
 
 function Header() {
   return (
@@ -29,9 +30,10 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="group-img">
+      {/* <div className="group-img">
         <img src={GroupImage} alt="" />
-      </div>
+      </div> */}
+      <LogoComp/>
     </>
   );
 }
